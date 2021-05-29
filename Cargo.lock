@@ -388,6 +388,7 @@ dependencies = [
 [[package]]
 name = "nutexb"
 version = "0.0.5"
+source = "git+https://github.com/jam1garner/nutexb#aa6bd5b6dd4f500143f965b62df838dff731f0ce"
 dependencies = [
  "binread",
  "binwrite",
