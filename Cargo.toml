@@ -12,3 +12,4 @@ image = "0.23.10"
 nutexb = { path = "../nutexb" }
 structopt = "0.3.19"
 ddsfile = "0.4"
+owo-colors = "2.0.0"

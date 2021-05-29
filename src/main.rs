@@ -3,6 +3,7 @@ use std::path::PathBuf;
 use structopt::StructOpt;
 
 use nutexb::writer::ToNutexb;
+use owo_colors::OwoColorize;
 
 #[derive(StructOpt)]
 struct Args {
@@ -37,6 +38,10 @@ fn write<T: ToNutexb>(image: &T, file: &mut File, name: &str, unswizzled: bool) 
 
 fn main() {
     let args = Args::from_args();
+    if args.dds && !args.unswizzled {
+        eprintln!("{}", "Warning: swizzling DDS files not current supported".yellow().bold());
+        eprintln!("{} Try using `--unswizzled` or `-u` to not swizzle", "help:".cyan().bold());
+    }
 
     let mut file = File::create(args.nutexb).unwrap();
     let name = args.name.as_deref().unwrap_or("img2nutexb_file");

@@ -272,6 +272,7 @@ dependencies = [
  "ddsfile",
  "image",
  "nutexb",
+ "owo-colors",
  "structopt",
 ]
 
@@ -393,6 +394,12 @@ dependencies = [
  "ddsfile",
  "image",
 ]
+
+[[package]]
+name = "owo-colors"
+version = "2.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f2fe43bf372b08cc9ccee5144715db59c79ab00168bbe4cf0d274dc0d5f64d7f"
 
 [[package]]
 name = "paste"
